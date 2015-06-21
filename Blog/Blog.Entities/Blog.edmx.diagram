@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="6f89a5d335bf484e83e9897e27191d88" Name="Diagram1">
+        <EntityTypeShape EntityType="BlogModel.Category" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BlogModel.Comment" Width="1.5" PointX="5.25" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BlogModel.Post" Width="1.5" PointX="8.25" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BlogModel.UserRole" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BlogModel.User" Width="1.5" PointX="3" PointY="3.125" IsExpanded="true" />
+        <AssociationConnector Association="BlogModel.FK__Posts__CategoryI__182C9B23" ManuallyRouted="false" />
+        <AssociationConnector Association="BlogModel.FK__Comments__PostId__1BFD2C07" ManuallyRouted="false" />
+        <AssociationConnector Association="BlogModel.FK__Comments__UserId__1B0907CE" ManuallyRouted="false" />
+        <AssociationConnector Association="BlogModel.FK__Posts__UserId__173876EA" ManuallyRouted="false" />
+        <AssociationConnector Association="BlogModel.FK__Users__Role__1273C1CD" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
