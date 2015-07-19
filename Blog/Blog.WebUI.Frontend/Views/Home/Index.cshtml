@@ -1,0 +1,26 @@
+﻿@using System.Configuration
+@using System.Text
+@using Blog.Entities
+@using Blog.Repositories
+@using Blog.WebUI.Admin.Code
+@{
+    
+    Layout = "~/Views/Shared/_layout.cshtml";
+}
+@{
+    List<Post> articles = ViewBag.Articles;
+}
+
+<h2>Published articles</h2>
+<div>
+    <ul>
+        
+        @foreach (var article in articles)
+        {
+            <li>
+                <div>Title: @article.Title</div>
+                <div>Text: @(Encoding.UTF8.GetString(article.Content))</div>
+            </li>
+        }
+    </ul>
+</div>

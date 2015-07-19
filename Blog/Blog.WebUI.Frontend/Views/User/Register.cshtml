@@ -1,0 +1,49 @@
+﻿@model Blog.WebUI.Frontend.Models.Registration
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true, "Wrong registration data entered.");
+    <div>
+        <fieldset>
+            <legend>Registration data: </legend>
+            <div class="editor-label">
+                @Html.LabelFor(u => u.Username)
+            </div>
+            <div class="editor-field">
+                @Html.TextBoxFor(u => u.Username)
+                @Html.ValidationMessageFor(u => u.Username)
+            </div>
+            <div class="editor-label">
+                @Html.LabelFor(u => u.Password)
+            </div>
+            <div class="editor-field">
+                @Html.PasswordFor(u => u.Password)
+                @Html.ValidationMessageFor(u => u.Password)
+            </div>
+            <div class="editor-label">
+                @Html.LabelFor(u => u.Confirmation)
+            </div>
+            <div class="editor-field">
+                @Html.PasswordFor(u => u.Confirmation)
+                @Html.ValidationMessageFor(u => u.Confirmation)
+            </div>
+            <div class="editor-label">
+                @Html.LabelFor(u => u.FirstName)
+            </div>
+            <div class="editor-field">
+                @Html.TextBoxFor(u => u.FirstName)
+                @Html.ValidationMessageFor(u => u.FirstName)
+            </div>
+            <div class="editor-label">
+                @Html.LabelFor(u => u.LastName)
+            </div>
+            <div class="editor-field">
+                @Html.TextBoxFor(u => u.LastName)
+                @Html.ValidationMessageFor(u => u.LastName)
+            </div>
+            <input type="submit" value="Register"/>
+            <input type="button" value="Cancel" onclick="window.location.href = '/User/Login/'"/>
+        </fieldset>
+    </div>
+}
+
